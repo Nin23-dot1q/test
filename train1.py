@@ -2,9 +2,9 @@ from netmiko import ConnectHandler
 SW1 = {
 'device_type':'cisco_ios',
 'ip':'10.215.27.123',
-'username':'admin',
-'password':'123',
-'secret':'password',
+'username':'vnpro', 
+'password':'vnpro#123', 
+'secret':'vnpro#321', 
 }
 net_connect = ConnectHandler(**SW1)
 net_connect.enable()
