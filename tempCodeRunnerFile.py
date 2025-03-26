@@ -1,7 +1,7 @@
 import requests
 import json
 def get_ticket(): 
-    base_url = "http://10.215.26.60/api/v1/ticket"
+    base_url = "http://10.215.26.60/api/v1/ticket/"
     header = {"content-type": "application/json"}
     body = json.dumps({
         "username": "admin",
@@ -14,16 +14,16 @@ def get_ticket():
     print(ticket) 
     return ticket
 get_ticket()
-
 def network_device():
-   url = "http://10.215.26.60/api/v1/network-device"
-   header = {
-    "x-auth-token": get_ticket()
+    url = "https://10.215.26.60/api/v1/api-docs/inventory-manager/network-devive"
+    header = {
+        "x-auth-token": get_ticket()
     }
-   response_device = requests.get(url, headers=header, verify=False)
-   print (response_device)
-   list_networkdevice = response_device.json()
-   print(json.dumps(list_networkdevice, indent = 2s))
-   return list_networkdevice 
+    response_device = requests.get(url, headers=header, verify=False)
+    print (response_device)
+    list_networkdevice = response_device.json()
+    #print(json.dumps(data, indent = 4))
+
+    return list_networkdevice   
 network_device()
 

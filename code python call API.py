@@ -23,7 +23,7 @@ def network_device():
    response_device = requests.get(url, headers=header, verify=False)
    print (response_device)
    list_networkdevice = response_device.json()
-   print(json.dumps(list_networkdevice, indent = 2s))
+   print(json.dumps(list_networkdevice, indent = 2))
    return list_networkdevice 
 network_device()
 
